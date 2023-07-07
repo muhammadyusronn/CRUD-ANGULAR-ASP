@@ -172,3 +172,4 @@
 /Users/u-sron/Desktop/dev/angular/Backend/MVC-API/obj/Debug/net6.0/MVC-API.pdb
 /Users/u-sron/Desktop/dev/angular/Backend/MVC-API/obj/Debug/net6.0/MVC-API.genruntimeconfig.cache
 /Users/u-sron/Desktop/dev/angular/Backend/MVC-API/obj/Debug/net6.0/ref/MVC-API.dll
+/Users/u-sron/Desktop/dev/angular/Backend/MVC-API/bin/Debug/net6.0/BCrypt.Net-Core.dll

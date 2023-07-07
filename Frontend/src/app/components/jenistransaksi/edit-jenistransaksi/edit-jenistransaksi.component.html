@@ -1,0 +1,33 @@
+<div class="container my-5">
+    <div class="card col-md-10">
+        <div class="card-header">
+            <h1 class="mb-2">Edit Jenis Transaksi</h1>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-6">
+                    <form #form="ngForm" (ngSubmit)="updateJenisTransaksi()">
+                        <div class="mb-3">
+                            <label for="id" class="form-label">ID</label>
+                            <input type="text" class="form-control" id="id" name="id" [(ngModel)]="jt.id" readonly>
+                          </div>
+                          <div class="mb-3">
+                            <label for="nama" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="nama" name="nama" [(ngModel)]="jt.nama">
+                          </div>
+                          <div class="mb-3">
+                              <label for="tipe" class="form-label">Tipe</label>
+                              <input type="text" class="form-control" id="tipe" name="tipe" [(ngModel)]="jt.tipe">
+                          </div>
+                          <div class="mb-3">
+                              <label for="kode_transaksi" class="form-label">Kode Transaksi</label>
+                              <input type="text" class="form-control" id="kode_transaksi" name="kode_transaksi" [(ngModel)]="jt.kode_transaksi">
+                          </div>
+                        <button type="submit" class="btn btn-sm btn-primary m-2">SAVE</button>
+                        <a class="btn btn-sm btn-danger" [routerLink]="['/jenistransaksi']">Cancel</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

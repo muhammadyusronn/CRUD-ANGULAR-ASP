@@ -1,0 +1,29 @@
+<div class="container my-5">
+    <div class="card col-md-10">
+        <div class="card-header">
+            <h1 class="mb-2">Add New Employee</h1>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-8">
+                    <form #form="ngForm" (ngSubmit)="addJenisTransaksi()">
+                        <div class="mb-3">
+                          <label for="nama" class="form-label">Nama</label>
+                          <input type="text" class="form-control" id="nama" name="nama" [(ngModel)]="addJsReq.nama">
+                        </div>
+                        <div class="mb-3">
+                            <label for="tipe" class="form-label">Tipe</label>
+                            <input type="text" class="form-control" id="tipe" name="tipe" [(ngModel)]="addJsReq.tipe">
+                        </div>
+                        <div class="mb-3">
+                            <label for="kode_transaksi" class="form-label">Kode Transaksi</label>
+                            <input type="text" class="form-control" id="kode_transaksi" name="kode_transaksi" [(ngModel)]="addJsReq.kode_transaksi">
+                        </div>
+                        <button type="submit" class="btn btn-primary">SAVE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

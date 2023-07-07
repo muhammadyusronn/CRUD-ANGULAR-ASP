@@ -1,0 +1,34 @@
+<div class="container my-5">
+    <div class="card col-md-10">
+        <div class="card-header">
+            <h1 class="mb-2">Add New User</h1>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-8">
+                    <form #form="ngForm" (ngSubmit)="updateUser()">
+                        <div class="mb-3">
+                            <label for="id" class="form-label">ID</label>
+                            <input type="text" class="form-control" id="id" name="id" [(ngModel)]="addUsrReq.id" readonly>
+                          </div>
+                        <div class="mb-3">
+                          <label for="nama" class="form-label">Nama</label>
+                          <input type="text" class="form-control" id="nama" name="nama" [(ngModel)]="addUsrReq.nama">
+                        </div>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" name="username" [(ngModel)]="addUsrReq.username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" [(ngModel)]="addUsrReq.password">
+                        </div>
+                        <button type="submit" class="btn btn-sm btn-primary m-2">SAVE</button>
+                        <a class="btn btn-sm btn-danger" [routerLink]="['/user']">Cancel</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

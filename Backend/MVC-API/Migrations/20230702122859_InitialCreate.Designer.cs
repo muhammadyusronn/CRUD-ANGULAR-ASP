@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MVC_API.Migrations
 {
     [DbContext(typeof(FullstackDbContext))]
-    [Migration("20230626150030_MyFirstMigration")]
-    partial class MyFirstMigration
+    [Migration("20230702122859_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -49,6 +49,23 @@ namespace MVC_API.Migrations
                     b.HasKey("id");
 
                     b.ToTable("Employees");
+                });
+
+            modelBuilder.Entity("MVC_API.Models.JenisTransaksi", b =>
+                {
+                    b.Property<Guid>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("nama")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("tipe")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.ToTable("JenisTransaksi");
                 });
 #pragma warning restore 612, 618
         }

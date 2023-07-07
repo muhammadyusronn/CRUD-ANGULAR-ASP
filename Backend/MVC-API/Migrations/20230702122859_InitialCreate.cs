@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace MVC_API.Migrations
 {
     /// <inheritdoc />
-    public partial class MyFirstMigration : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -26,6 +26,19 @@ namespace MVC_API.Migrations
                 {
                     table.PrimaryKey("PK_Employees", x => x.id);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "JenisTransaksi",
+                columns: table => new
+                {
+                    id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    nama = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    tipe = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_JenisTransaksi", x => x.id);
+                });
         }
 
         /// <inheritdoc />
@@ -33,6 +46,9 @@ namespace MVC_API.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Employees");
+
+            migrationBuilder.DropTable(
+                name: "JenisTransaksi");
         }
     }
 }
