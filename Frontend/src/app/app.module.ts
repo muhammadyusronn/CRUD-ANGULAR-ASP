@@ -1,12 +1,12 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { DataTablesModule } from "angular-datatables";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeesListComponent } from './components/employees/employees-list/employees-list.component';
 import { AddEmployeeComponent } from './components/employees/add-employee/add-employee.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditEmployeeComponent } from './components/employees/edit-employee/edit-employee.component';
 import { JenistransksiListComponent } from './components/jenistransaksi/jenistransksi-list/jenistransksi-list.component';
 import { AddJenistransaksiComponent } from './components/jenistransaksi/add-jenistransaksi/add-jenistransaksi.component';
@@ -18,6 +18,10 @@ import { EditUserComponent } from './components/user/edit-user/edit-user.compone
 import { TransaksiListComponent } from './components/transaksi/transaksi-list/transaksi-list.component';
 import { AddTransaksiComponent } from './components/transaksi/add-transaksi/add-transaksi.component';
 import { EditTransaksiComponent } from './components/transaksi/edit-transaksi/edit-transaksi.component';
+import { LoginPageComponent } from './components/Login/login-page/login-page.component';
+import { AuthInterceptor } from './services/auth/auth.interceptor';
+
+
 
 @NgModule({
   declarations: [
@@ -33,15 +37,24 @@ import { EditTransaksiComponent } from './components/transaksi/edit-transaksi/ed
     EditUserComponent,
     TransaksiListComponent,
     AddTransaksiComponent,
-    EditTransaksiComponent
+    EditTransaksiComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
+    DataTablesModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:AuthInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

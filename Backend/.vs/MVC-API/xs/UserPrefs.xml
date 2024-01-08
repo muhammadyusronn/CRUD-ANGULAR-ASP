@@ -1,14 +1,16 @@
 ﻿<Properties StartupConfiguration="{56BD7D7C-070D-4314-BA98-A45C351FA968}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.MVC-API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workbench ActiveDocument="MVC-API/Controllers/TransaksiController.cs">
     <Files>
       <File FileName="MVC-API/Controllers/EmployeeController.cs" />
       <File FileName="MVC-API/Controllers/JenisTransaksiController.cs" />
-      <File FileName="MVC-API/Data/FullstackDbContext.cs" />
-      <File FileName="MVC-API/Program.cs" />
+      <File FileName="MVC-API/Controllers/AuthController.cs" Line="44" Column="52" />
       <File FileName="MVC-API/Controllers/UserController.cs" />
-      <File FileName="MVC-API/Controllers/TransaksiController.cs" Line="22" Column="1" />
-      <File FileName="MVC-API/Models/Transaksi.cs" Line="16" Column="1" />
+      <File FileName="MVC-API/Program.cs" />
+      <File FileName="MVC-API/appsettings.json" Line="17" Column="2" />
+      <File FileName="MVC-API/Controllers/TransaksiController.cs" Line="42" Column="42" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,18 +20,14 @@
               <Node name="Controllers" expanded="True">
                 <Node name="TransaksiController.cs" selected="True" />
               </Node>
-              <Node name="Data" expanded="True" />
-              <Node name="Models" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.MVC-API PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

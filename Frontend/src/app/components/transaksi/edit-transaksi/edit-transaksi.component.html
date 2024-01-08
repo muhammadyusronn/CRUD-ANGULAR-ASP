@@ -1,1 +1,32 @@
-<p>edit-transaksi works!</p>
+<div class="container my-5">
+    <div class="card col-md-10">
+        <div class="card-header">
+            <h1 class="mb-2">Edit Transaksi</h1>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-8">
+                    <form #form="ngForm" (ngSubmit)="updateTransaksi()">
+                        <div class="mb-3">
+                          <label for="tanggal_transaksi" class="form-label">tanggal_transaksi</label>
+                          <input type="date" class="form-control" id="tanggal_transaksi" name="tanggal_transaksi" [(ngModel)]="addTrxReq.tanggal_transaksi">
+                        </div>
+                        <div class="mb-3">
+                            <label for="nominal_transaksi" class="form-label">Nominal Transaksi</label>
+                            <input type="number" class="form-control" id="nominal_transaksi"  name="nominal_transaksi" [(ngModel)]="addTrxReq.nominal_transaksi">
+                        </div>
+                        <div class="mb-3">
+                            <label for="kode_transaksi" class="form-label">Jenis Transaksi</label>
+                            <select class="form-control" #corporation required name="kode_transaksi" [(ngModel)]="addTrxReq.kode_transaksi">
+                                <option *ngFor="let jt of jenis_transaksi" [value]="jt.kode_transaksi">{{jt.nama}}</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-sm btn-primary m-2">SAVE</button>
+                        <a class="btn btn-sm btn-danger" [routerLink]="['/user']">Cancel</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

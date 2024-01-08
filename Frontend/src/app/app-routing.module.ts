@@ -12,9 +12,15 @@ import { AddUserComponent } from './components/user/add-user/add-user.component'
 import { EditUserComponent } from './components/user/edit-user/edit-user.component';
 import { TransaksiListComponent } from './components/transaksi/transaksi-list/transaksi-list.component';
 import { AddTransaksiComponent } from './components/transaksi/add-transaksi/add-transaksi.component';
+import { EditTransaksiComponent } from './components/transaksi/edit-transaksi/edit-transaksi.component';
+import { LoginPageComponent } from './components/Login/login-page/login-page.component';
 
 
 const routes: Routes = [
+  {
+    path:'login',
+    component:LoginPageComponent
+  },
   {
     path:'',
     component:HomeComponent
@@ -50,6 +56,10 @@ const routes: Routes = [
   {
     path:'transaksi/add',
     component:AddTransaksiComponent
+  },
+  {
+    path:'transaksi/edit/:id',
+    component:EditTransaksiComponent
   },
   {
     path:'employees',

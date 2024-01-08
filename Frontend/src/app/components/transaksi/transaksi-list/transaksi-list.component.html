@@ -4,9 +4,9 @@
             <h1 class="mb-3">Transaksi List</h1>
         </div>
         <div class="card-body">
-            <a class="btn btn-primary" aria-current="page" routerLink="/transaksi/add"><i class="fa fa=plus"></i> Tambah Transaksi</a>
+            <a class="btn btn-primary mb-4" aria-current="page" routerLink="/transaksi/add"><i class="fa fa=plus"></i> Tambah Transaksi</a>
             <div class="table-responsive">
-                <table class="table table-striped table-hover table-responsive" *ngIf="transaksi && transaksi.length > 0"> 
+                <table class="table table-striped table-hover table-responsive" datatable [dtOptions]="dtOptions" *ngIf="transaksi && transaksi.length > 0"> 
                     <thead>
                         <tr>
                             <th>Tanggal Transaksi</th>

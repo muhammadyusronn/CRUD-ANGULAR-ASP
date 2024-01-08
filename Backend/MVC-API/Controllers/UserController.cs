@@ -6,12 +6,14 @@ using Microsoft.AspNetCore.Mvc;
 using MVC_API.Data;
 using MVC_API.Models;
 using BCrypt.Net;
+using Microsoft.AspNetCore.Authorization;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace MVC_API.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("/api/[controller]")]
     public class UserController : Controller
     {

@@ -16,8 +16,8 @@ export class AddTransaksiComponent implements OnInit {
     tanggal_transaksi:'',
     kode_transaksi:'',
     nominal_transaksi:0,
-    created_by:'muhammadyusron',
-    update_by:'muhammadyusron',
+    created_by:'',
+    update_by: '',
     tipe_transaksi:'',
     nama_transaksi:'',
     nama:''

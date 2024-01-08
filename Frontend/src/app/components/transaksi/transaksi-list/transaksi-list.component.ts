@@ -10,9 +10,16 @@ import { TransaksiService } from 'src/app/services/transaksi.service';
 })
 export class TransaksiListComponent implements OnInit{
   transaksi : Transaksi[] = [];
+  dtOptions: DataTables.Settings = {};
   constructor(private transaksiService:TransaksiService, private router:Router){}
   ngOnInit(): void {
     this.getAllTransaksi()
+    this.dtOptions = {
+      pagingType: 'full_numbers',
+      pageLength: 5,
+      processing: true,
+      lengthMenu:['5','10','20','100'],
+    };
   }
 
   getAllTransaksi(){
